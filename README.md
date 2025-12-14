@@ -1,1 +1,7 @@
-# data_Structure
+## Penjelasan Program Pencarian Data
+
+Program ini dirancang untuk membandingkan kinerja dua metode pencarian data, yaitu **Sentinel Linear Search** dan **Index Sequential Search**, dalam melakukan pencarian nama buah pada sebuah dataset berformat CSV. Dataset dibaca menggunakan modul *File System* pada lingkungan Node.js, kemudian diproses dengan mengambil kolom pertama sebagai data utama dan dinormalisasi ke huruf kecil untuk menjaga konsistensi pencarian. Setelah data dimuat, dataset diurutkan secara alfabetis sebagai prasyarat penerapan metode **Index Sequential Search**.
+
+Metode **Sentinel Linear Search** bekerja dengan menempatkan nilai target sebagai elemen terakhir sementara pada dataset, sehingga proses pencarian tidak memerlukan pengecekan batas indeks di setiap iterasi. Pendekatan ini bertujuan untuk mengurangi jumlah operasi perulangan dan meningkatkan efisiensi pencarian secara linear. Sementara itu, **Index Sequential Search** membagi dataset ke dalam beberapa blok dengan ukuran tertentu dan membangun tabel indeks untuk mempersempit ruang pencarian, sehingga pencarian hanya dilakukan pada blok yang berpotensi mengandung data yang dicari.
+
+Selain itu, program mengukur performa masing-masing algoritma berdasarkan jumlah langkah pencarian (*steps*) dan waktu eksekusi menggunakan *high-resolution timer*. Pengguna dapat memasukkan lebih dari satu target pencarian sekaligus, dan hasil pencarian disajikan dalam bentuk tabel komparatif yang memuat informasi keberhasilan pencarian, posisi indeks data, jumlah langkah, serta waktu eksekusi. Dengan demikian, program ini memberikan gambaran empiris mengenai efisiensi relatif kedua algoritma pencarian pada dataset berukuran besar.
