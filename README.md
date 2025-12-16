@@ -1,7 +1,16 @@
-## Penjelasan Program Pencarian Data
+## Program Description: Data Search
 
-Program ini dirancang untuk membandingkan kinerja dua metode pencarian data, yaitu **Sentinel Linear Search** dan **Index Sequential Search**, dalam melakukan pencarian nama buah pada sebuah dataset berformat CSV. Dataset dibaca menggunakan modul *File System* pada lingkungan Node.js, kemudian diproses dengan mengambil kolom pertama sebagai data utama dan dinormalisasi ke huruf kecil untuk menjaga konsistensi pencarian. Setelah data dimuat, dataset diurutkan secara alfabetis sebagai prasyarat penerapan metode **Index Sequential Search**.
+This program is designed to compare the performance of two data search methods, namely Sentinel Linear Search and Index Sequential Search, in locating fruit names within a CSV-formatted dataset. The dataset is read using the File System module in a Node.js environment, then processed by extracting the first column as the main data and normalizing it to lowercase to maintain search consistency. Once loaded, the dataset is sorted alphabetically as a prerequisite for implementing the Index Sequential Search method.
 
-Metode **Sentinel Linear Search** bekerja dengan menempatkan nilai target sebagai elemen terakhir sementara pada dataset, sehingga proses pencarian tidak memerlukan pengecekan batas indeks di setiap iterasi. Pendekatan ini bertujuan untuk mengurangi jumlah operasi perulangan dan meningkatkan efisiensi pencarian secara linear. Sementara itu, **Index Sequential Search** membagi dataset ke dalam beberapa blok dengan ukuran tertentu dan membangun tabel indeks untuk mempersempit ruang pencarian, sehingga pencarian hanya dilakukan pada blok yang berpotensi mengandung data yang dicari.
+The Sentinel Linear Search method works by placing the target value as a temporary last element in the dataset, allowing the search process to proceed without checking the index bounds at each iteration. This approach aims to reduce the number of loop operations and improve linear search efficiency. Meanwhile, Index Sequential Search divides the dataset into several blocks of a certain size and builds an index table to narrow down the search space, so that the search is only conducted within the block likely to contain the target data.
 
-Selain itu, program mengukur performa masing-masing algoritma berdasarkan jumlah langkah pencarian (*steps*) dan waktu eksekusi menggunakan *high-resolution timer*. Pengguna dapat memasukkan lebih dari satu target pencarian sekaligus, dan hasil pencarian disajikan dalam bentuk tabel komparatif yang memuat informasi keberhasilan pencarian, posisi indeks data, jumlah langkah, serta waktu eksekusi. Dengan demikian, program ini memberikan gambaran empiris mengenai efisiensi relatif kedua algoritma pencarian pada dataset berukuran besar.
+Additionally, the program measures the performance of each algorithm based on the number of search steps and execution time using a high-resolution timer. Users can input multiple search targets simultaneously, and the search results are presented in a comparative table showing search success, data index positions, number of steps, and execution time.
+
+In this way, the program provides an empirical overview of the relative efficiency of both search algorithms on large datasets.
+
+## Installation
+```
+git clone <repository-url>
+cd <project-folder>
+npm install
+```
