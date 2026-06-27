@@ -10,7 +10,8 @@ In this way, the program provides an empirical overview of the relative efficien
 
 ## Installation
 ```
-git clone <repository-url>
-cd <project-folder>
+git clone https://github.com/CANDRA2006/data_Structure
+cd data_Structure
 npm install
+node app.js
 ```
